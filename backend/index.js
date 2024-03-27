@@ -13,9 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection With MongoDB
-mongoose.connect(
-  "mongodb+srv://magicearth10:<password>@cluster0.asbvz3y.mongodb.net/e-commerce"
-);
+
 
 //  API Creation
 
