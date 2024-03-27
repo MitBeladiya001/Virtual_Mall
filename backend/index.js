@@ -14,7 +14,7 @@ app.use(cors());
 
 // Database Connection With MongoDB
 mongoose.connect(
-  "mongodb+srv://magicearth10:iamdiscoDancer@cluster0.asbvz3y.mongodb.net/e-commerce"
+  "mongodb+srv://magicearth10:<password>@cluster0.asbvz3y.mongodb.net/e-commerce"
 );
 
 //  API Creation
