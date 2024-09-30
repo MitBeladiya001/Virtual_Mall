@@ -220,8 +220,8 @@ app.post("/signup", async (req, res) => {
 
   // solt token can't readable
 
-  const token = jwt.sign(data, "secrey_ecom");
-  res.json({ success: true, token });
+  // token here
+
 });
 
 // creating endpoint for user login
@@ -236,8 +236,7 @@ app.post("/login", async (req, res) => {
           id: user.id,
         },
       };
-
-      const token = jwt.sign(data, "secret_ecom");
+      //2nd token
       res.json({ success: true, token });
     } else {
       res.json({ success: false, errors: "Wrong password" });
@@ -274,7 +273,7 @@ const fetchUser = async (req, res, next) => {
     res.status(401).send({ errors: "Please Authenticate Using Valid Token!" });
   } else {
     try {
-      const data = jwt.verify(token, "secret_ecom");
+      // 3rd token
       req.user = data.user;
       next();
     } catch (error) {
